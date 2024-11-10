@@ -372,6 +372,7 @@ gel <- function(g, x, tet0 = NULL, gradv = NULL, smooth = FALSE,
                 model = TRUE, X = FALSE, Y = FALSE, TypeGel = "baseGel", alpha = NULL,
                 eqConst = NULL, eqConstFullVcov = FALSE, onlyCoefficients=FALSE, ...)
     {
+  print("custom gmm here")
 	type <- match.arg(type)
 	optfct <- match.arg(optfct)
 	optlam <- match.arg(optlam)
@@ -524,7 +525,7 @@ evalGel <- function(g, x, tet0, gradv = NULL, smooth = FALSE,
         if (is.null(pt))
             pt <- 1/n
         G <- G/k1
-        gt <- gt*sqrt(pt*bw/k2)
+        gt <- gt*sqrt(1*bw/k2)
         qrGt <- qr(gt)
         piv <- sort.int(qrGt$pivot, index.return=TRUE)$ix
         R <- qr.R(qrGt)[,piv]
