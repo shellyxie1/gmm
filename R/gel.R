@@ -372,7 +372,6 @@ gel <- function(g, x, tet0 = NULL, gradv = NULL, smooth = FALSE,
                 model = TRUE, X = FALSE, Y = FALSE, TypeGel = "baseGel", alpha = NULL,
                 eqConst = NULL, eqConstFullVcov = FALSE, onlyCoefficients=FALSE, ...)
     {
-  print("custom gmm here")
 	type <- match.arg(type)
 	optfct <- match.arg(optfct)
 	optlam <- match.arg(optlam)
